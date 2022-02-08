@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="FMzEAh3aM4gTNWrj3HahCKPRgUxBNU5jz_gNNY38ZR0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Check Your IP Public Address</title>
+    <meta name="description" content="Check your IP Public.">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132352022-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-132352022-1');
+    </script>
+
+    <!-- CrazyEgg Tracking Code for ipify.org -->
+    <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0096/3644.js" async="async"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/static/images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <header>
+        <div class="first-level">
+            <div class="content-in-blocks">
+                <div class="logo-block">
+                    <a href="/" class="logo">
+                        <img src="logo.png" alt="ipify logo"  style="width:75x;height:75px">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div style="display: flex;justify-content: center;padding-top: 20px;">
+        <form action="?" style="text-align: center;" method="post">
+        <label><br>Check Your IP: </label><input type="text" id="json.ip" name="json.ip" value="">  <input type="submit" value="Submit">
+        </form>
+    </div>
+    <section class="about-slide">
+        <div class="container">
+
+            <div id="content" class="content-image">
+
+                <div class="table-wrapper" style="padding-top: 20px;">
+                    <table class="table api-usage-table overflow-auto-table">
+                        <thead>
+                            <tr>
+                                <div style="display: flex;justify-content: center;padding-top: 10px;">
+                                    <h2 style="border: 2px solid #bf9a5a78;background-color: #ffffffa8;padding: 20px;color:  #000000;">
+                                        <script type="application/javascript">
+                                            function getgeoip(json) {
+                                                console.log(json);
+                                                document.write(" Your IP Address: ", json.ip);
+                                                document.write("<br> Country: ", json.country);
+                                                document.write("<br> ASN: ", json.asn);
+                                                document.write("<br> ASN Organization : ", json.asn_organization);
+                                                document.write("<br> ISP: ", json.organization);
+                                                document.write("<br> Region : ", json.region);
+                                                document.write("<br> City: ", json.city);
+                                                document.write("<br> Timezone : ", json.timezone);   
+                                            }
+                                        </script>
+                                        <script type="application/javascript"
+                                            src="https://api.ip.sb/geoip?callback=getgeoip"></script>
+                                    </h2>
+                                </div>
+                            </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+</body>
+<style>
+    .content-image{
+        background-image: url('map.png');
+        height: 600px;
+        background-size: 100% 550px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
+</html>
